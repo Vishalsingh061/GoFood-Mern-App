@@ -73,7 +73,7 @@ export default function Home() {
                     {data.CategoryName}
                   </div>
                   <hr id="hr-success" style={{ height: "4px", backgroundImage: "-webkit-linear-gradient(left,rgb(0, 255, 137),rgb(0, 0, 0))" }} />
-                  {foodItems.length !== 0 ? foodItems.filter(
+                  {foodItems !== [] ? foodItems.filter(
                     (items) => (items.CategoryName === data.CategoryName) && (items.name.toLowerCase().includes(search.toLowerCase())))
                     .map((filterItems) => {
                       return (
