@@ -37,8 +37,11 @@ export default function Card(props) {
     };
 
     useEffect(() => {
+    if (priceRef.current) {
         setSize(priceRef.current.value);
-    }, []);
+    }
+}, []);
+
 
     let finalPrice = qty * parseInt(options[size]);
 
